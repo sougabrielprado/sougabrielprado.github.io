@@ -2,3 +2,5 @@ __pycache__/
 *.log
 master_data.json
 .tmp.driveupload/
+
+Logs/empire_backup.zip
