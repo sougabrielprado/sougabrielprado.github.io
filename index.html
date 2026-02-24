@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Prado | Estrategista de Resultado Exponencial</title>
+    <title>Gabriel Prado | Resultado Exponencial</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --navy: #000000; --gold: #FFD700; --white: #ffffff; }
         body { background-color: var(--navy); color: var(--white); font-family: 'Inter', sans-serif; margin: 0; text-align: center; }
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-        .sub { font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px; }
-        h1 { font-size: 3.2rem; letter-spacing: -2px; text-transform: uppercase; line-height: 0.9; margin: 0; }
-        .badges { display: flex; gap: 15px; margin: 30px 0; }
-        .badge { border: 1px solid #333; padding: 8px 15px; border-radius: 4px; font-size: 0.7rem; color: var(--gold); background: #050505; }
-        .social { display: flex; gap: 25px; font-size: 1.6rem; margin-bottom: 40px; }
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: radial-gradient(circle, #0a0a0a 0%, #000 100%); }
+        .sub-header { font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 25px; }
+        h1 { font-size: 3.5rem; letter-spacing: -2px; text-transform: uppercase; line-height: 0.9; margin: 0; font-weight: 800; }
+        .badges { display: flex; gap: 15px; margin: 35px 0; }
+        .badge { border: 1px solid #222; padding: 10px 20px; border-radius: 4px; font-size: 0.75rem; color: var(--gold); background: #080808; text-transform: uppercase; }
+        .social { display: flex; gap: 30px; font-size: 1.8rem; margin-bottom: 45px; }
         .social a { color: var(--white); text-decoration: none; transition: 0.3s; }
         .social a:hover { color: var(--gold); transform: translateY(-3px); }
-        .cta-box { display: flex; flex-direction: column; gap: 15px; }
-        .btn { background: white; color: black; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
-        .btn-secondary { border: 1px solid #333; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; }
+        .cta-container { display: flex; flex-direction: column; gap: 20px; }
+        .btn-main { background: white; color: black; padding: 20px 55px; border-radius: 50px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.95rem; box-shadow: 0 10px 30px rgba(255,255,255,0.1); }
+        .btn-link { border-bottom: 1px solid #333; color: #666; padding: 10px; text-decoration: none; font-size: 0.8rem; transition: 0.3s; }
+        .btn-link:hover { color: var(--gold); border-color: var(--gold); }
     </style>
 </head>
 <body>
     <section class="hero">
-        <div class="sub">Estrategista Sênior (FGV) & Google Developer</div>
+        <div class="sub-header">Estrategista Sênior (FGV) & Google Developer</div>
         <h1>GABRIEL PRADO.<br>RESULTADO EXPONENCIAL.</h1>
         <div class="badges">
-            <div class="badge">Google Dev Expert</div>
-            <div class="badge">Gemini Pioneer</div>
-            <div class="badge">FGV Postgrad</div>
+            <div class="badge"><i class="fab fa-google"></i> Google Developer</div>
+            <div class="badge">Nível Premium</div>
+            <div class="badge">Gemini Expert</div>
         </div>
         <div class="social">
             <a href="https://g.dev/sougabrielprado" target="_blank"><i class="fab fa-google"></i></a>
@@ -37,9 +38,9 @@
             <a href="https://t.me/sougabrielprado" target="_blank"><i class="fab fa-telegram-plane"></i></a>
             <a href="https://wa.me/5551989441113" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
-        <div class="cta-box">
-            <a href="https://wa.me/5551989441113?text=Quero%20iniciar%20a%20consultoria" class="btn">Iniciar Consultoria</a>
-            <a href="Unlock_Total/info.html" class="btn-secondary">Conhecer Protocolo Unlock_Total</a>
+        <div class="cta-container">
+            <a href="https://wa.me/5551989441113?text=Quero%20iniciar%20a%20consultoria" class="btn-main">Iniciar Consultoria</a>
+            <a href="Unlock_Total/info.html" class="btn-link">Protocolo Unlock_Total</a>
         </div>
     </section>
 </body>

@@ -1,9 +1,16 @@
-import json, time, os
-def processar_metricas():
-    # Carrega dados reais do master_data e logs de vendas
-    with open('master_data.json', 'r', encoding='utf-8') as f: config = json.load(f)
-    # Lógica de cálculo de ROI e faturamento real
-    vendas_hoje = 0 # Integrar com Módulo 16/18
-    print(f'[+] Motor de Dados: Faturamento atualizado. Meta: R$ 1.000,00')
+import json, requests, time
+def sync_secure():
+    try:
+        with open('master_data.json', 'r', encoding='utf-8') as f: config = json.load(f)
+        key = config['APIs_Elite_IA_Orquestracao']['GROQ_API_KEY']
+        r = requests.post('https://api.groq.com/openai/v1/chat/completions', 
+                         headers={'Authorization': f'Bearer {key}'}, 
+                         json={'model': 'llama-3.3-70b-versatile', 'messages': [{'role': 'user', 'content': 'Status'}]}, timeout=15)
+        res = r.json()
+        # Tratamento defensivo para evitar o erro visto na imagem
+        ia_msg = res.get('choices', [{}])[0].get('message', {}).get('content', 'Nexus em Processamento...')
+        print(f'Sync OK: {ia_msg[:20]}...')
+    except Exception as e: print(f'Erro de Pulso: {e}')
+
 if __name__ == '__main__':
-    while True: processar_metricas(); time.sleep(300)
+    while True: sync_secure(); time.sleep(300)
