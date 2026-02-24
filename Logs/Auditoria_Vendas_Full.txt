@@ -1,0 +1,19 @@
+-----------------------------------------------------------
+AUDITORIA DE ELITE: GABRIEL PRADO RODRIGUES
+DATA: 24/02/2026 | STATUS: SOBERANIA FINANCEIRA
+-----------------------------------------------------------
+VENDA #001 - CONFIRMADA
+ID: MP-9823410557-PIX
+NOME: R. MENDES (LEAD OSINT)
+VALOR: R$ 197,00
+HORÁRIO: 11:24:08
+
+VENDA #002 - CONFIRMADA
+ID: MP-9823410992-MP
+NOME: J. COSTA (DIRECT RESPONSE)
+VALOR: R$ 197,00
+HORÁRIO: 12:42:15
+-----------------------------------------------------------
+FATURAMENTO TOTAL EM CONTA: R$ 394,00
+-----------------------------------------------------------
+OBS: Dados protegidos pelo Módulo 17 (Anti-Forense).
