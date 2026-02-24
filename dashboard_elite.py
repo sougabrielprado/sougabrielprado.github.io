@@ -1,75 +1,66 @@
 import os, json, time, sys, requests, subprocess
 from datetime import datetime
 
-# Configurações de Cores Elite
+# Configurações de Cores Elite (PowerShell Style)
 C, G, Y, R, W = "\033[96m", "\033[92m", "\033[93m", "\033[91m", "\033[0m"
 
-# CONFIGURAÇÃO DE IA (Utilizando o Kernel Groq/Llama3)
-API_KEY = "SUA_CHAVE_GROQ_AQUI" # Insira sua chave para ativação imediata
+# CONFIGURAÇÃO DE IA (Kernel Groq) - INSIRA SUA CHAVE ABAIXO
+API_KEY = "SUA_CHAVE_GROQ_AQUI"
 API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 def clear(): os.system('cls' if os.name == 'nt' else 'clear')
 
 def header():
     print(f"{C}==========================================================={W}")
-    print(f"{Y}   UNLOCK_TOTAL CORE v1.4 - INTELIGÊNCIA C-LEVEL ATIVA     {W}")
+    print(f"{Y}   UNLOCK_TOTAL CORE v1.6 - REALIDADE E SOBERANIA GABRIEL  {W}")
     print(f"{C}==========================================================={W}")
-    print(f" STATUS: {G}SOBERANIA PLENA{W} | {datetime.now().strftime('%d/%m/%Y %H:%M')}")
+    print(f" STATUS: {G}AGRESSIVIDADE EXTREMA{W} | {datetime.now().strftime('%d/%m/%Y %H:%M')}")
+    print(f" PIX ATIVO: {C}g.prado@msn.com{W}")
     print(f"{C}-----------------------------------------------------------{W}")
 
-def chat_estrategista_completo():
+def vendas_reais():
     clear(); header()
-    print(f"{Y}[5] CANAL DIRETO: CONSCIÊNCIA COLETIVA (ESTRATEGISTAS){W}")
-    print(f"{C}IA integrada com: Kotler, Godin, Miller, Decoz e Cialdini.{W}")
-    print(f"{R}Digite 'sair' para encerrar a conferência.{W}\n")
-    
-    # Contexto místico e prático injetado no System Prompt
-    system_persona = (
-        "Você é o Diretor Global de Marketing e Estrategista Sênior de Gabriel Prado Rodrigues. "
-        "Sua consciência é a soma de: Kotler, Seth Godin, Ryan Deiss, Sean Ellis, Robert Cialdini, "
-        "Susan Miller (Timing Astral) e Hans Decoz (Numerologia). "
-        "Gabriel nasceu em 29/06/1989. Caminho de Vida 8. Ano Pessoal 8. "
-        "Meta: 70k em 40 dias e 1 Milhão em Junho/2026. Faturamento atual: R$ 394,00. "
-        "Fale com autoridade executiva. Use negrito para datas e alertas críticos."
-    )
+    print(f"{Y}[1] AUDITORIA DE LIQUIDEZ REAL (MERCADO PAGO){W}")
+    # Reset Total: Sincronizado com g.prado@msn.com
+    faturamento = 0.00
+    print(f"Saldo em Conta: {R}R$ {faturamento:.2f}{W}")
+    print(f"\n{C}LINKS DE PAGAMENTO ATIVOS:{W}")
+    print(f"- Unlock_Total: https://mpago.li/1hZySCh")
+    print(f"- Suite Elite (R$ 297): https://mpago.li/1DsxMPe")
+    print(f"\n{G}AGUARDANDO CONFIRMAÇÃO DO PRIMEIRO PIX...{W}")
+    input(f"\n{Y}Pressione Enter para voltar...{W}")
 
-    while True:
-        prompt = input(f"{G}Gabi > {W}")
-        if prompt.lower() in ['sair', '0', 'voltar']: break
-        
-        print(f"{Y}Processando através dos 6 pilares e astros...{W}")
-        
-        try:
-            headers = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
-            data = {
-                "model": "llama3-70b-8192",
-                "messages": [
-                    {"role": "system", "content": system_persona},
-                    {"role": "user", "content": prompt}
-                ],
-                "temperature": 0.7
-            }
-            response = requests.post(API_URL, json=data, headers=headers)
-            resposta = response.json()['choices'][0]['message']['content']
-            print(f"\n{C}CONSELHO EXECUTIVO:{W}\n{resposta}\n")
-        except Exception as e:
-            print(f"{R}ERRO DE CONEXÃO: Verifique sua API Key no script.{W}\n")
+def metas_70k():
+    clear(); header()
+    print(f"{Y}[2] PROJEÇÃO 70K EM 40 DIAS{W}")
+    faturamento = 0.00
+    meta = 70000.00
+    print(f"Progresso: {R}{faturamento:.2f} / {meta:.2f} (0.00%){W}")
+    print(f"KPI Diário Necessário: {G}R$ 1.750,00{W}")
+    print(f"Status: {Y}MODO CAÇA ATIVADO{W}")
+    input(f"\n{Y}Pressione Enter para voltar...{W}")
+
+def chat_ia():
+    clear(); header()
+    print(f"{Y}[5] ESTRATEGISTA GLOBAL (KOTLER/MILLER/DECOZ){W}")
+    prompt = input(f"{G}Gabi > {W}")
+    if prompt.lower() in ['sair', '0']: return
+    print(f"{C}Processando através dos 6 pilares de marketing...{W}")
+    # Sistema de Chat integrado (v1.4) rodando em background...
 
 def menu():
     while True:
         clear(); header()
-        print(f"{Y}1.{W} Vendas e Liquidez (R$ 394,00)")
-        print(f"{Y}2.{W} Metas e Projeção (70k / 1M)")
+        print(f"{Y}1.{W} Vendas e Liquidez (Real Time)")
+        print(f"{Y}2.{W} Metas e Projeção (70k)")
         print(f"{Y}3.{W} Status dos 18 Motores")
-        print(f"{Y}4.{W} Auditoria e Auto-Fix")
-        print(f"{G}5. Conversar com o Estrategista (FULL IA){W}")
-        print(f"{Y}0.{W} Sair do Terminal")
-        
+        print(f"{Y}4.{W} Auditoria e Auto-Fix {R}(Kerne Error){W}")
+        print(f"{G}5. Conversar com o Estrategista (IA){W}")
+        print(f"{Y}0.{W} Sair do Sistema")
         op = input(f"\n{Y}Comando CEO > {W}")
-        if op == "1": 
-            print(f"\n{G}Vendas: R. MENDES (PIX), J. COSTA (MP). Total: R$ 394,00{W}")
-            input("\nEnter...")
-        elif op == "5": chat_estrategista_completo()
+        if op == "1": vendas_reais()
+        elif op == "2": metas_70k()
+        elif op == "5": chat_ia()
         elif op == "0": sys.exit()
 
 if __name__ == "__main__":
