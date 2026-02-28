@@ -1,1 +1,0 @@
-Start-Process -FilePath 'python.exe' -ArgumentList '"E:\4 . Engenharia\Unlock_Total\4_Interface_CLevel\dashboard_sync.py"' -WindowStyle Hidden -RedirectStandardOutput 'E:\4 . Engenharia\Unlock_Total\Logs\telemetry_out.log' -RedirectStandardError 'E:\4 . Engenharia\Unlock_Total\Logs\telemetry_err.log'
