@@ -1,1 +1,0 @@
-LOG DE SISTEMA: Merge Conflict resolvido via hard-reset. Vazamento do C: neutralizado. Aguardando OSINT.
